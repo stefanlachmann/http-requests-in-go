@@ -32,7 +32,7 @@ func main() {
 			fmt.Printf("server: request body: %s\n", reqBody)
 
 			fmt.Fprintf(w, `{"message": "hello!"}`)
-			time.Sleep(35 * time.Second)
+			//			time.Sleep(35 * time.Second) // test timeout
 		})
 		server := http.Server{
 			Addr:    fmt.Sprintf(":%d", serverPort),
